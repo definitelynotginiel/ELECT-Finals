@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 10px;
+}
+
+/* Style for both box and text elements */
+.shape {
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+  }
+  
+  /* Style for text elements */
+  .text-element {
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px;
+  }
+  
