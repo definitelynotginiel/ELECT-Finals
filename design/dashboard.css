@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
+    
 }
 ::after,
 ::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 a {
@@ -24,6 +26,7 @@ h1 {
 
 body {
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .wrapper {
@@ -35,7 +38,7 @@ body {
     width: 100%;
     overflow: hidden;
     transition: all 0.35s ease-in-out;
-    background-color: #fafbfe;
+    background-color: #F5ECD7;
 }
 
 #sidebar {
@@ -43,17 +46,19 @@ body {
     min-width: 70px;
     z-index: 1000;
     transition: all .25s ease-in-out;
-    background-color: #fff;
     display: flex;
+    background-color: #F5ECD7;
     flex-direction: column;
 }
 
 #sidebar.expand {
     width: 260px;
-    min-width: 260px;
+    min-width: 225px;
     border-right: black solid 2px;
 }
-
+.d-flex{
+    padding-top: 15px;
+}
 .toggle-btn {
     background-color: transparent;
     cursor: pointer;
@@ -71,7 +76,13 @@ body {
 }
 
 .sidebar-logo a {
-    color: black;
+    color: #FF6366;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+ .sidebar-logo a span {
+    color: #141313;
     font-size: 1.15rem;
     font-weight: 600;
 }
@@ -82,7 +93,7 @@ body {
 }
 
 .sidebar-nav {
-    padding: 2rem 0;
+    padding: 2rem 0; 
     flex: 1 1 auto;
 }
 
@@ -108,6 +119,8 @@ a.sidebar-link:hover {
 
 .sidebar-item {
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 #sidebar:not(.expand) .sidebar-item .sidebar-dropdown {

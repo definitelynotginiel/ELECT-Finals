@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../cssFontawesome/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="../cssFontawesome/fontawesome.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../design/community.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="../Pictures/logo.png" width="40" height="40" alt="Logo">
+        </div>
+        <div class="navbar-right">
+            <a href="#" class="nav-link">
+            <i class="fa-solid fa-gear settings-icon"></i>
+            </a>
+            <a href="#" class="nav-link">
+            <i class="fa-solid fa-user profile-icon"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <img src="../Pictures/logo.png" width="26" height="26" alt="Logo">
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">WeThrive</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>My Project</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <span>Create Project</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Community</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="./logout.php" class="sidebar-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <div class="main">
+            <div class="posts">
+                <div class="post-card">
+                    <div class="image-placeholder"></div>
+                    <div class="rate-section">
+                        <h5>Rate</h5>
+                        <div class="comment-section">
+                            <i class="fa-solid fa-comment chat-icon"></i>
+                            <input type="text" class="comment-input" placeholder="Comment">
+                            <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts">
+                <div class="post-card">
+                    <div class="image-placeholder"></div>
+                    <div class="rate-section">
+                        <h5>Rate</h5>
+                        <div class="comment-section">
+                            <i class="fa-solid fa-comment chat-icon"></i>
+                            <input type="text" class="comment-input" placeholder="Comment">
+                            <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/dashboard.js"></script>
+</body>
+
+</html>
