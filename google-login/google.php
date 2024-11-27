@@ -1,7 +1,10 @@
 <?php
     require '../connection/db_connection.php';
+    
 
 
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Design/google.css">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-	<script src = "../bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../../Design/google.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<script src = "../../bootstrap/js/bootstrap.bundle.js"></script>
 </head>
     <body>
 
@@ -35,6 +38,5 @@
         </form>
             <button type="submit" class="btn btn-primary btn-block">Login</button>
 
-       
     </body>
 </html>

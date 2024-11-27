@@ -12,7 +12,7 @@
         // Fetch user data from the MongoDB database
         $userCollection = $m->users->userCollection; // access your collection
 
-        $user = $userCollection->findOne(['gmail' => $email]);
+        $user = $userCollection->findOne(['email' => $email]);
 
         if ($user) {
             // Verify the password (ensure you're hashing passwords in your application)

@@ -35,7 +35,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Project</title>
+    <title>My Project</title>
 
     <link rel="stylesheet" href="../cssFontawesome/all.min.css"> <!-- Font Awesome -->
     <link rel="stylesheet" href="../cssFontawesome/fontawesome.min.css"> <!-- Font Awesome -->
@@ -43,7 +43,7 @@
     <script src="../bootstrap/js/bootstrap.bundle.js"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../design/dashcreate.css">
+    <link rel="stylesheet" href="../design/myproject.css">
 </head>
 
 <body>
@@ -107,7 +107,14 @@
                 </div>
             </div>
             <ul class="sidebar-nav">
-                
+                <div class="container-fluid">
+                    <div class="search-container">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
                 <li class="sidebar-item">
                     <a href="./dashboard.php" class="sidebar-link">
                         <i class="fa-solid fa-house"></i>
@@ -115,7 +122,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="./myproject.php" class="sidebar-link">
+                    <a href="#" class="sidebar-link">
                         <i class="fa-solid fa-folder"></i>
                         <span>My Project</span>
                     </a>
@@ -127,7 +134,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="./community.php" class="sidebar-link">
+                    <a href="#" class="sidebar-link">
                         <i class="fa-solid fa-users"></i>
                         <span>Community</span>
                     </a>
@@ -135,57 +142,14 @@
             </ul>
         </aside>
         <div class="main">
-            <h1 class="category-title">Category</h1>
-            <div class="container"> 
-                <div class="card" style="width: 18rem;">
-                    <img src="../Pictures/educ.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Educational</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Visit Template</a>
-                    </div>
-                </div>   
-                <div class="card" style="width: 18rem;">
-                    <img src="../Pictures/business.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Business</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Visit Template</a>
-                    </div>
-                </div>   
-                <div class="card" style="width: 18rem;">
-                    <img src="../Pictures/educ.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Blog</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Visit Template</a>
-                    </div>
-                </div>   
-                <div class="card" style="width: 18rem;">
-                    <img src="../Pictures/product.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Product</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Visit Template</a>
-                    </div>
-                </div>   
-            </div>
-            <hr>
-                <div class="container-fluid">
-                    <h4></h4>
-                    <div class="search-container">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
+            <div class="container">
                 
+            </div>
             <div class="create-container">
                 <div class="project-container">
-                    <div class="create-project-box" onclick="location.href='dashedit.php';">
-                        <i class="fa-solid fa-plus" style="font-size: 2rem;"></i>
-                        <p>Create a Project</p>
+                    <!-- This is where you want to update your edit and direct you to dashedit to update your work -->
+                    <div class="my-project-box" onclick="location.href='dashedit.php';">
+                        <!-- This is where the project will be seen in small size -->
                     </div>
                 </div>
             </div>
@@ -193,8 +157,7 @@
         </div>
     </div>
  
-    <script src="../script/dashboard.js"></script>
-    <script src="../script/jquery.js"></script>
+    <script src="../script/myproject.js"></script>
 </body>
 </html>
 

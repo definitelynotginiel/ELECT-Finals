@@ -1,15 +1,20 @@
-// Toggle password visibility
-const togglePassword = document.getElementById("togglePassword");
-const passwordField = document.getElementById("password");
-const eyeIcon = document.getElementById("eyeIcon");
+    // Toggle Password Visibility for Signup and Login
+    $("#togglePassword").click(function () {
+        const passwordInput = $(this).siblings("input");
+        const icon = $(this).find("i");
+        if (passwordInput.attr("type") === "password") {
+            passwordInput.attr("type", "text");
+            icon.removeClass("fa-eye").addClass("fa-eye-slash");
+        } else {
+            passwordInput.attr("type", "password");
+            icon.removeClass("fa-eye-slash").addClass("fa-eye");
+        }
+    });
 
-togglePassword.addEventListener("click", function () {
-    // Toggle the type attribute of the password field
-    const type = passwordField.type === "password" ? "text" : "password";
-    passwordField.type = type;
     
-    // Toggle the eye icon
-    eyeIcon.classList.toggle("fa-eye");
-    eyeIcon.classList.toggle("fa-eye-slash");
-});
+    // Switch from Login to Signup
+    $('#switchToSignupButton').click(function() {
+        $('#login').modal('hide');
+        $('#signup').modal('show');
+    });
 

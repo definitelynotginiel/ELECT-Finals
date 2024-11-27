@@ -37,11 +37,7 @@ body {
     transition: all 0.35s ease-in-out;
     background-color: #F5ECD7;
 
-    padding: 18px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
+    padding: 15px;
 }
 
 #sidebar {
@@ -58,8 +54,6 @@ body {
 #sidebar.expand {
     width: 260px;
     min-width: 260px;
-    border-right: black solid 2px;
-
 }
 
 .toggle-btn {
@@ -178,7 +172,11 @@ a.sidebar-link:hover {
     cursor: pointer;
 }
 /* Head Navigation bar */
+ul.dropdown-menu-show{
+    width: 200px;
+    height: 100px;
 
+}
 nav.headnav{
     border-bottom: black solid 1px;
     background: #fff;
@@ -186,16 +184,11 @@ nav.headnav{
     height: 200px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     height: 60px;
 }
-/* Total Publish works */
 .t-post{
-    border: #DE283B solid 1px;
-    background-color: #fff;
-
-    padding: 20px;
+    border: black solid 1px;
     border-radius: 10px;
     width: 250px;
     height: 150px;
@@ -225,6 +218,7 @@ nav.headnav{
 }
 
 .prof-menu{
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,7 +234,7 @@ h3.prof-details{
     width: 180px;
     margin: 0 0 0 10px;
 }
-.line{
+hr.line{
     margin: 20px 10px 0 10px;
 }
 
@@ -263,10 +257,22 @@ button#dropdownMenuButton.prof-btn label{
     font-weight: 600;
 }
 
+/* Create Project Box */
+.create-container{
+    border: black solid 2px;
+    display: flex;
+    width: auto;
+    max-width: 250px;
+    padding: 10px;
+
+    justify-content: center;
+}
+
 
 /* This is the Create Project */
 .create-project-box{
-    border:2px dashed #007bff; 
+    border:1px solid #007bff; 
+    background-color: #fff;
     padding: 20px;  
     cursor: pointer;
 

@@ -58,31 +58,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Premium</a></li>
                     </ul>
                     <button type="button" class="btn login" data-bs-toggle="modal" data-bs-target="#login">Login</button>
                 </div>
-                <a class="btn-link " href="../users/google.php">Get Started</a>
+                <a class="btn-link " href="../google-login/google.php">Get Started</a>
             </div>
         </nav>
     </header>
 
-    <!-- Modal -->
+    <!-- Login Modal -->
     <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <!-- <div class="modal-header">
-                    <h5 class="modal-title" id="loginLabel">Login Form</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div> -->
                 <div class="modal-body">
-                    <!-- Login Form -->
-                    <div class="logbox">
-                        <img src="../Pictures/logo.png" class="logo-center" alt="Logo">
-                    </div>
-
+                    <img src="../Pictures/logo.png" class="logo-center" alt="Logo">
                     <form id="loginForm">
                         <div class="logform">
                             <div class="mb-3">
@@ -102,17 +93,94 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </span>
                                 </div>
                             </div>
-							<button type="submit" class="btn btn-primary w-100">Login</button>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
                         </div>
                     </form>
-
-                        <div class="signbox">
-						    <label class="label-dont">Don't have an account in WeThrive? <a class="sign" href="./register.php">Sign up</a></label>
-						</div>
-                            <label class="label-continue">Or continue with</label>
-                        <a href="./google.php">
+                    <div class="signbox">
+                        <label class="label-dont">
+                            Don't have an account?  
+                            <button class="cancel-btn" data-bs-target="#signup" data-bs-toggle="modal" data-bs-dismiss="modal">Signup</button>
+                        </label>
+                    </div>
+                    <label class="label-continue">Or continue with</label>
+                        <a href="../users/google-login/google.php">
                             <img src="../Pictures/gmail-icon.png" width="38" height="38" alt="Logo">
                         </a>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="logbox">
+                    <img src="../Pictures/logo.png" class="logo-center" alt="Logo">
+                </div>
+                <div class="signup-modal-body">
+                    <form id="signupForm">
+                        <div class="row">
+                            <!-- First Name -->
+                            <div class="col-md-6 mb-3">
+                                <label for="fname" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your first name" required>
+                            </div>
+                            <!-- Last Name -->
+                            <div class="col-md-6 mb-3">
+                                <label for="lname" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Gender -->
+                            <div class="col-md-12 mb-3 mr-5">
+                                <label class="gender-label">Gender</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Email -->
+                            <div class="col-md-6 mb-3">
+                                <label for="signupEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="signupEmail" name="gmail" placeholder="Enter your email" required>
+                            </div>
+                            <!-- Phone Number -->
+                            <div class="col-md-6 mb-3">
+                                <label for="pnum" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="pnum" name="pnum" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Password -->
+                            <div class="col-md-6 mb-3">
+                                <label for="pass" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter your password" required>
+                            </div>
+                            <!-- Confirm Password -->
+                            <div class="col-md-6 mb-3">
+                                <label for="confirmPass" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPass" name="confirmPass" placeholder="Confirm your password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                    <div class="signbox">
+                        <label class="label-dont">
+                            Already have an account?  
+                            <button class="cancel-btn" data-bs-target="#login" data-bs-toggle="modal" data-bs-dismiss="modal">Login</button>
+                        </label>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
@@ -132,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <p class="info-t">empowers you to design,<br>and launch your own<br>stunning website with<br> ease.</p>
             <div class="start-box">
-                <a class="btn link-two" href="../users/google.php">Get Started</a>
+                <a class="btn link-two" href="../google-login/google.php">Get Started</a>
             </div>
         </div>
         <div class="pic-box cssanimation fadeIn">
