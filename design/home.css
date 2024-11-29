@@ -371,11 +371,74 @@ a.btn.link-two:hover{
     left: 50%;
     transform: translate(7%, -75%);
 }
+.features{
+    height: 100vh;
+    margin-top: 50px;
+    width: 100%;
 
+}
+
+.ft1{
+    height: 50vh;
+    padding: 20px;
+   
+}
+.ft1txt h3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 50px 50px 50px 100px;
+    width: 400px;
+    
+
+   
+}
+.circle{
+    border-radius: 20px;
+    width: 50%;
+    height: 300px;
+    background-color: #F4DA9E;
+    padding: 20px;
+    position: relative;
+    bottom: 87.5%;
+    left: 45%;
+    align-items: center;
+    justify-content: center;
+}
+.circle h6{
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 25px;
+    text-align: center;
+}
+
+.circle p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 25px 50px 25px;
+    text-align    : center;
+}
+.circle a.btn-link{
+    
+    margin-left: 275px;
+}
+.ft2{
+    height: 50vh;
+    background-color: #F4DA9E;
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
 
 
 /* Custom Footer Styles */
 footer {
+
     background-color: #222;
     color: white;
     padding: 40px;
@@ -423,7 +486,7 @@ footer .copyright {
     text-align: center;
     font-size: 14px;
     color: #bbb;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 
@@ -442,7 +505,7 @@ footer .copyright {
 
 
 /* Media for Mobile Responsiveness */
-@media (max-width: 770px) {
+@media (max-width: 1096px) {
     /* Make the picture crop in half */
     img.img-logo{
         width: 50px;
@@ -548,6 +611,7 @@ footer .copyright {
         left: 50%;
         transform: translate(30%, 100%);
     }
+    
 
     /* Footer adjustments */
     footer .footer-section h5 {
@@ -556,6 +620,67 @@ footer .copyright {
 
     footer .footer-links a {
         font-size: 14px; 
+    }
+
+    .features{
+        height: 100vh;
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ft1{
+        height: 50vh;
+        padding: 20px;
+
+        
+    }
+    .ft1txt h3{
+        font-family: "Montserrat", sans-serif;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: left;
+        margin: 50px 0 0 0; 
+
+    }
+    .circle{
+        border-radius: 20px;
+        width: 50%;
+        height: 300px;
+        background-color: #F4DA9E;
+        padding: 20px;
+        margin-top: 100px;
+       
+    }
+    .circle h6{
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 25px;
+        text-align: center;
+    }
+    
+    .circle p{
+        font-family: "Montserrat", sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        margin: 25px 25px 50px 25px;
+        text-align    : center;
+    }
+    .circle a.btn-link{
+        margin: 0;
+        margin-left: 27.5px;
+    }
+    .ft2{
+        height: 50vh;
+        background-color: #F4DA9E;
+        width: 100%;
+        padding: 20px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
     }
 }
 

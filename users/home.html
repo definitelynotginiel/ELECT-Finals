@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 // Include the database connection file
 require '../connection/db_connection.php';
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo json_encode(['status' => 'error', 'message' => 'Wrong username or password']);
     exit;
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -205,6 +205,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="pic-box cssanimation fadeIn">
             <img class="cssanimation leWaterWave sequence" src="../Pictures/main-pic.png" alt="Image" width="597" height="300">
+        </div>
+        <div class="features">
+            <div class="ft1">
+                <div class="ft1txt">
+                    <h3>Customize <br>to make it <br> your own</h3>   
+                </div>
+                <div class="circle">
+                    <h6>Intuitive drag and drop</h6>
+                    <p>Effortlessly add and arrange your text, visuals, buttons <br> and even entire sections. </p>
+                    <a class="btn-link " href="../google-login/google.php">Get Started</a>
+            </div>
+            </div>
+            <div class="ft2">
+                <p>At WeThrive.com we’re committed to the open web. With the help of our customers, we devote 5% of our time to pushing forward the free, open source WeThrive code and community.</p>
+            </div>
         </div>
     </div>
 
