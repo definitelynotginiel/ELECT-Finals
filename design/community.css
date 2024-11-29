@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+}
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+/* Overall box */
+.main {
+    min-height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #F5ECD7;
+    padding: 18px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #fff;
+    border-right:black solid 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+    border-right: black solid 2px;
+
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.sidebar-logo {
+    margin: auto 0;
+}
+
+.sidebar-logo label{
+    color: #FF6366;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+/* Search bar part */
+.search-container {
+    transition: all 0.25s ease-in-out;
+}
+
+#sidebar:not(.expand) .search-container {
+    display: none; /* Hide the search bar and button when the sidebar is collapsed */
+}
+
+#sidebar.expand .search-container {
+    display: flex; /* Show the search bar and button when the sidebar is expanded */
+    width: 100%; /* Make it take full width */
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.525rem;
+    color: black;
+    display: block;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: #FF6366;
+    border-left: 3px solid #bbb;
+    color: white;
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    background-color: #0e2238;
+    padding: 0;
+    min-width: 15rem;
+    display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
+    display: block;
+    max-height: 15em;
+    width: 100%;
+    opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+.logo{
+
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.logo img:hover{
+    cursor: pointer;
+}
+/* Head Navigation bar */
+
+nav.headnav{
+    border-bottom: black solid 1px;
+    background: #fff;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+}
+/* Total Publish works */
+
+
+/* Profile Settings */
+/* i */
+.prof-btn {
+    background: transparent; /* Background can be adjusted as needed */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#dropdownIcon {
+    transition: transform 0.5s ease; /* Smooth transition for icon rotation */
+}
+
+.rotate-down {
+    transform: rotate(360deg); /* Rotates the icon down */
+}
+
+.prof-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prof-logo{
+    margin-left: 10px;
+    width: 67px;
+}
+
+h3.prof-details{
+    align-items: center;
+    width: 180px;
+    margin: 0 0 0 10px;
+}
+.line{
+    margin: 20px 10px 0 10px;
+}
+
+button#dropdownMenuButton.prof-btn{
+    border: none;
+    background: none;
+    padding: 12px;
+
+}
+button#dropdownMenuButton.prof-btn img{
+    margin-right: 10px;
+}
+button#dropdownMenuButton.prof-btn label{
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dropdown button span{
+    font-weight: 600;
+}
+
+
+/* This is the Create Project */
+.create-project-box{
+    border:2px dashed #007bff; 
+    padding: 20px;  
+    cursor: pointer;
+
+    text-align: center;
+} 
+.container{
+    border: black solid 2px;
+
+    width: 100%;
+    max-width: 1800px;
+    height: 300px;
+    margin: 0 0 2.15rem 0;
+}
+.posts{
+    padding: 20px;
+    width: 50%;
+}
+
+.post-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100vh;
+}
+
+.image-placeholder {
+    background-color: #ccc;
+    width: 100%;
+    height: 75%;
+    margin-bottom: 10px;
+
+}
+
+.rate-section h5 {
+    margin: 0;
+}
+
+.comment-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-input {
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #f00;
+    cursor: pointer;
+}
+
+.add-post-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-add {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
